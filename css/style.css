@@ -1,0 +1,123 @@
+/* ===== Loader ===== */
+.loader-wrapper{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:120px;
+}
+
+.loader {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  color: #d90429;
+  border: 2px solid;
+  position: relative;
+}
+.loader::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+    100% {inset:0}
+}
+
+/* ===== Card Design ===== */
+
+.card{
+  background:#ffffff;
+  border-radius:20px;
+  padding:35px;
+  box-shadow:0 20px 60px rgba(217,4,41,0.15);
+  border-top:6px solid #d90429;
+  text-align: justify;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Watermark */
+.card::after{
+  content:"ChristoSangeet.com";
+  position:absolute;
+  top:45%;
+  left:8%;
+  font-size:60px;
+  color:rgba(217,4,41,0.05);
+  transform:rotate(-30deg);
+  pointer-events:none;
+}
+
+.main-title{
+  text-align:center;
+  font-size:30px;
+  font-weight:bold;
+  color:#d90429;
+  margin-bottom:10px;
+}
+
+.date-box{
+  text-align:center;
+  margin:10px 0 25px;
+  color:#555;
+  font-size:15px;
+}
+
+/* Premium Badge */
+.day-badge{
+  display:block;
+  text-align:center;
+  background:linear-gradient(45deg,#d90429,#ef233c);
+  color:white;
+  padding:10px 20px;
+  border-radius:50px;
+  font-size:15px;
+  font-weight:bold;
+  margin:0 auto 25px auto;
+  width:fit-content;
+  box-shadow:0 5px 15px rgba(217,4,41,0.4);
+  letter-spacing:0.5px;
+}
+
+h2{
+  margin:10px 0;
+  font-size:24px;
+  color:#222;
+  text-align:center;
+}
+
+.content{
+  line-height:1.95;
+  white-space:pre-line;
+  color:#333;
+  font-size:16px;
+}
+
+.protect-overlay{
+  position:fixed;
+  inset:0;
+  background:black;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:20px;
+  z-index:99999;
+}
+
+/* Mobile Responsive */
+@media(max-width:600px){
+  .card{
+    padding:25px;
+  }
+  .main-title{
+    font-size:24px;
+  }
+  h2{
+    font-size:20px;
+  }
+}
