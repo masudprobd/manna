@@ -5,6 +5,9 @@
 body {
    font-family: 'Hind Siliguri', sans-serif; 
 }
+.card, .content, .main-title {
+  font-family: 'Hind Siliguri', sans-serif;
+}
 
 /* ===== Loader ===== */
 .loader-wrapper{
@@ -95,7 +98,6 @@ h2{
   margin:10px 0;
   font-size:24px;
   color:#222;
-  font-family: 'Hind Siliguri', sans-serif;  
   text-align:center;
 }
 
@@ -103,7 +105,6 @@ h2{
   line-height:1.95;
   white-space:pre-line;
   color:#333;
-  font-family: 'Hind Siliguri', sans-serif;  
   font-size:16px;
 }
 
